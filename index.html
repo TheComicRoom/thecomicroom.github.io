@@ -2,41 +2,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The Comic Room</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 40px;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
-    }
-    .comic-link {
-      display: inline-block;
-      margin: 20px;
-      padding: 20px;
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 8px;
-      text-decoration: none;
-      color: #00ffe0;
-      font-size: 1.2em;
-    }
-    .comic-link:hover {
-      background: #222;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Dante - Chapter One: The Storm Returns</title>
+    <style>
+        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        img { max-height: 95vh; max-width: 95vw; display: none; margin: auto; }
+        img.active { display: block; }
+        #nav { position: absolute; bottom: 20px; width: 100%; text-align: center; }
+        button { background: #fff; border: none; padding: 10px 20px; margin: 0 10px; font-size: 16px; cursor: pointer; }
+    </style>
 </head>
 <body>
-  <h1>📚 Welcome to The Comic Room</h1>
-  <p>True stories reimagined as manga.</p>
-
-  <a class="comic-link" href="dante/index.html">🌩️ Read: Dante – Eyes of the Storm</a><br>
-  <a class="comic-link" href="#">🆕 New Comic Coming Soon</a>
+    <img class="active" src="chapter1_panel1.jpg" />
+    <img src="chapter1_panel2.jpg" />
+    <img src="chapter1_panel3.jpg" />
+    <img src="chapter1_panel4.jpg" />
+    <img src="chapter1_panel5.jpg" />
+    <img src="chapter1_panel6.jpg" />
+    <img src="chapter1_panel7.jpg" />
+    <img src="chapter1_panel8.jpg" />
+    <img src="chapter1_panel9.jpg" />
+    <img src="chapter1_panel10.jpg" />
+    <div id="nav">
+        <button onclick="prev()">Previous</button>
+        <button onclick="next()">Next</button>
+    </div>
+    <script>
+        let current = 0;
+        const images = document.querySelectorAll("img");
+        function show(index) {
+            images[current].classList.remove("active");
+            current = (index + images.length) % images.length;
+            images[current].classList.add("active");
+        }
+        function next() { show(current + 1); }
+        function prev() { show(current - 1); }
+    </script>
 </body>
 </html>
