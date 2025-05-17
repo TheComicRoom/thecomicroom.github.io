@@ -1,76 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Dante – Chapter One: The Storm Returns</title>
-  <style>
-    body {
-      margin: 0;
-      background: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    img {
-      max-width: 95%;
-      max-height: 95vh;
-      display: none;
-    }
-    img.active {
-      display: block;
-    }
-    #nav {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-    }
-    button {
-      background: #fff;
-      border: none;
-      padding: 10px 20px;
-      margin: 0 10px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Murder of Crows | Dante Comic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #eee;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            text-align: center;
+            padding-top: 20px;
+        }
+        nav {
+            background-color: #222;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .panel {
+            display: block;
+            margin: 20px auto;
+            max-width: 90%;
+            border-radius: 8px;
+        }
+        section {
+            padding-bottom: 60px;
+        }
+    </style>
 </head>
 <body>
-  <img class="active" src="chapter1_title.jpg" />
-  <img src="chapter1_panel1.jpg" />
-  <img src="chapter1_panel2.jpg" />
-  <img src="chapter1_panel3.jpg" />
-  <img src="chapter1_panel4.jpg" />
-  <img src="chapter1_panel5.jpg" />
-  <img src="chapter1_panel6.jpg" />
-  <img src="chapter1_panel7.jpg" />
-  <img src="chapter1_panel8.jpg" />
-  <img src="chapter1_panel9.jpg" />
-  <img src="chapter1_tbc.png" />
 
-  <div id="nav">
-    <button onclick="prev()">Previous</button>
-    <button onclick="next()">Next</button>
-  </div>
+<nav>
+    <a href="#chapter1">Chapter 1</a>
+    <a href="#chapter2">Chapter 2</a>
+</nav>
 
-  <script>
-    let current = 0;
-    const images = document.querySelectorAll("img");
+<h1>Murder of Crows</h1>
 
-    function show(index) {
-      images[current].classList.remove("active");
-      current = (index + images.length) % images.length;
-      images[current].classList.add("active");
-    }
+<section id="chapter1">
+    <h2>Chapter 1: Shadows Remember</h2>
+    <img class="panel" src="chapter1_title.jpg" alt="Chapter 1 Title">
+    <img class="panel" src="chapter1_panel1.jpg" alt="Chapter 1 Panel 1">
+    <img class="panel" src="chapter1_panel2.jpg" alt="Chapter 1 Panel 2">
+    <img class="panel" src="chapter1_panel3.jpg" alt="Chapter 1 Panel 3">
+    <img class="panel" src="chapter1_panel4.jpg" alt="Chapter 1 Panel 4">
+    <img class="panel" src="chapter1_panel5.jpg" alt="Chapter 1 Panel 5">
+    <img class="panel" src="chapter1_panel6.jpg" alt="Chapter 1 Panel 6">
+    <img class="panel" src="chapter1_panel7.jpg" alt="Chapter 1 Panel 7">
+    <img class="panel" src="chapter1_panel8.jpg" alt="Chapter 1 Panel 8">
+    <img class="panel" src="chapter1_panel9.jpg" alt="Chapter 1 Panel 9">
+    <img class="panel" src="chapter1_tbc.png" alt="Chapter 1 End">
+</section>
 
-    function next() {
-      show(current + 1);
-    }
+<section id="chapter2">
+    <h2>Chapter 2: The Warden of the Void Descends</h2>
+    <img class="panel" src="chapter2_panel1.png" alt="Chapter 2 Panel 1">
+    <img class="panel" src="chapter2_panel2.png" alt="Chapter 2 Panel 2">
+    <img class="panel" src="chapter2_panel3.png" alt="Chapter 2 Panel 3">
+    <img class="panel" src="chapter2_panel4.png" alt="Chapter 2 Panel 4">
+    <img class="panel" src="chapter2_panel5.png" alt="Chapter 2 Panel 5">
+    <img class="panel" src="chapter2_panel6-7.png" alt="Chapter 2 Panel 6–7">
+    <img class="panel" src="chapter2_panel8.png" alt="Chapter 2 Panel 8">
+    <img class="panel" src="chapter2_panel9.png" alt="Chapter 2 Panel 9">
+    <img class="panel" src="chapter2_panel10.png" alt="Chapter 2 Panel 10">
+    <img class="panel" src="chapter2_panel11.png" alt="Chapter 2 Panel 11">
+    <img class="panel" src="chapter2_panel12.png" alt="Chapter 2 Panel 12">
+    <img class="panel" src="chapter2_final.png" alt="Chapter 2 Final Panel">
+</section>
 
-    function prev() {
-      show(current - 1);
-    }
-  </script>
 </body>
 </html>
